@@ -38,3 +38,15 @@ class ViewController: UIViewController, PDFViewDelegate {
 
 }
 ```
+
+## Tips you can also create PDF programatically
+``swift
+        let newDocument = PDFDocument()
+        guard let page = PDFPage(image: UIImage(systemName: "house")!) else {
+            return
+        }
+        newDocument.insert(page, at: 0)
+        pdfView.document = newDocument
+ ```
+
+
